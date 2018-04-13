@@ -12,13 +12,7 @@ declare(strict_types=1);
 */
 
 classinterface RaportableInterface {
-    public function printPdf() {
-
-    }
-
-    public function printCsv() {
-
-    }
-    
+    public function printPdf()
+    public function printCsv()    
 };
     
