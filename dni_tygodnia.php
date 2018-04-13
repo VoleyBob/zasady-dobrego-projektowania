@@ -2,24 +2,52 @@
 declare(strict_types=1);
 
 /**
- * Ć. 1. DNI TYGODNIA
- * Stwórz metod, która na podstawie liczby 1-7 wyśkwetli nazwę dnia tygodnia jej odpowiadającej
- * Poniedziałe - 1
- * Wtorek - 2
+ * Ćwiczenie 1
+ * Stwórz metodę, która na podstawie liczby (1-7) wyświetli nazwę tygodnia odpowiadającą tej liczbie:
+ * • Poniedziałek dla 1,
+ * • Wtorek dla 2,
+ * • […],
+ * • Niedziela dla 7.
  */
 
-
-  
-// Można lepiej roziązać SWITCHEM 
-
-
 $getNumber = readline('What is your number? ');
-// echo 'Your day of Week is ', $dayOfWeek[$getNumber], PHP_EOL;
 echo 'Your day of Week is ', returnNameOfDay($getNumber), PHP_EOL;
 
 
+// Lepsze rozwiązanie SWITCHEM 
 
-function returnNameOfDay($innerNumber): string 
+function returnNameOfDay($dayOfWeek): string 
+{
+    switch($dayOfWeek) {
+        case 1: 
+            return('Poniedziałek');
+        case 2: 
+            return('Wtorek');
+        case 3: 
+            return('Środa');
+        case 4: 
+            return('Czwartek');
+        case 5: 
+            return('Piątek');
+        case 6: 
+            return('Sobota');
+        case 7: 
+            return('Niedziela');
+        default:
+            return(PHP_EOL.'Number must be between 1 and 7');;
+            break; 
+    }
+}
+
+
+
+exit;
+
+
+
+// Moje pierwotne rozwiązanie 
+
+function _returnNameOfDay($innerNumber): string 
 {
         
     $dayOfWeek = [
@@ -37,7 +65,6 @@ function returnNameOfDay($innerNumber): string
 
 
 
-exit;
 
 
 do {
